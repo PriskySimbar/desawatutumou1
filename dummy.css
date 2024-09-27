@@ -1,0 +1,58 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Content Segment Styles */
+.content-segment {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.latest-news, .announcements, .events {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.latest-news h2, .announcements h2, .events h2 {
+    text-align: center;
+    color: blue;
+}
+
+.news-item, .announcement-item, .event-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3, .announcement-item h3, .event-item h3 {
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+.date {
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-segment {
+        flex-direction: column;
+    }
+}

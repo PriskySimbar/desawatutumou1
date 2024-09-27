@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of Desa Watutumou</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .info-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Map of Desa Watutumou</h1>
+    <div id="map"></div>
+    <div class="info-box">
+        <h2>Places of Interest</h2>
+        <ul>
+            <li>Pantai Talise</li>
+            <li>Mega Mas</li>
+            <!-- Add more places as needed -->
+        </ul>
+    </div>
+    <script>
+        function initMap() {
+            var watutumou = { lat: 1.1234, lng: 124.1234 }; // Replace with actual coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: watutumou
+            });
+
+            var marker = new google.maps.Marker({
+                position: watutumou,
+                map: map,
+                title: 'Desa Watutumou'
+            });
+
+            // Add more markers as needed
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+
+</html>
